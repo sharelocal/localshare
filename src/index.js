@@ -7,6 +7,7 @@ const start = async () => {
   const tunnel = await localshare({
     host: program.host,
     port: program.port,
+    api: program.api,
     subdomain: program.subdomain,
   });
 
@@ -19,6 +20,7 @@ const start = async () => {
 
 program
   .name('share')
+  .option('-a, --api <api>', 'Proxy server', 'localshare.me')
   .option('-h, --host <host>', 'Host to share', '127.0.0.1')
   .option('-p, --port <port>', 'Port to share')
   .option('-s, --subdomain <domain>', 'Custom subdomain')

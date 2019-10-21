@@ -16,13 +16,16 @@ const createSockets = (options) => {
 };
 
 module.exports = async (options) => {
-  const { data } = await axios.post('https://localshare.me/hello', {
+  const { data } = await axios.post(`https://${options.api}/hello`, {
     subdomain: options.subdomain ? options.subdomain : undefined,
   });
 
   if (data.url) {
     createSockets({
-      remote: data,
+      remote: {
+        host: options.api,
+        port: data.port,
+      },
       local: options,
     });
   }
