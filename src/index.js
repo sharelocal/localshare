@@ -11,10 +11,10 @@ const start = async () => {
     subdomain: program.subdomain,
   });
 
-  if (!tunnel.url) {
-    console.error(`Proxy creation is failed: ${JSON.stringify(tunnel)}`);
-  } else {
+  if (tunnel) {
     console.log(`Your proxy is ${tunnel.url}`);
+  } else {
+    console.error(`Proxy creation is failed: ${JSON.stringify(tunnel)}`);
   }
 };
 
