@@ -1,7 +1,7 @@
 {
   "name": "localshare",
-  "version": "1.0.1",
-  "description": "Share your localhost to the internet 🌐",
+  "version": "0.0.1",
+  "description": "🔗 share your localhost to the internet",
   "main": "src/index.js",
   "bin": {
     "share": "src/index.js"
@@ -29,5 +29,6 @@
   "dependencies": {
     "axios": "^0.19.0",
     "commander": "^3.0.2"
-  }
+  },
+  "devDependencies": {}
 }
