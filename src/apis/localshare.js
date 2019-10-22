@@ -75,7 +75,7 @@ module.exports = async (options) => {
   debug('tunnel created', data);
 
   if (!data.subdomain) {
-    return;
+    return data;
   }
 
   new TunnelCluster({
