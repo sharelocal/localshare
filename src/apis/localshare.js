@@ -21,6 +21,7 @@ class Tunnel extends EventEmitter {
       });
 
       this.local.on('close', () => {
+        this.remote.destroy();
         this.emit('close');
       });
 
