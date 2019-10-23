@@ -2,7 +2,7 @@
   "name": "localshare",
   "version": "0.0.1",
   "description": "🔗 share your localhost to the internet",
-  "main": "src/index.js",
+  "main": "src/apis/localshare.js",
   "bin": {
     "share": "src/index.js"
   },
