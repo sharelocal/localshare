@@ -11,16 +11,16 @@ const start = async () => {
     subdomain: program.subdomain,
   });
 
-  if (!tunnel.url) {
-    console.error(`Proxy creation is failed: ${JSON.stringify(tunnel)}`);
-  } else {
+  if (tunnel.url) {
     console.log(`Your proxy is ${tunnel.url}`);
+  } else {
+    console.error(`Proxy creation is failed: ${JSON.stringify(tunnel)}`);
   }
 };
 
 program
   .name('share')
-  .option('-a, --api <api>', 'Proxy server', 'localshare.me')
+  .option('-a, --api <api>', 'Proxy server', 'https://localshare.me')
   .option('-h, --host <host>', 'Host to share', '127.0.0.1')
   .option('-p, --port <port>', 'Port to share')
   .option('-s, --subdomain <domain>', 'Custom subdomain')
