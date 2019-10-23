@@ -1,6 +1,6 @@
 {
   "name": "localshare",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "🔗 share your localhost to the internet",
   "main": "src/apis/localshare.js",
   "bin": {
